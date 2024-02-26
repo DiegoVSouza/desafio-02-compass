@@ -1,0 +1,82 @@
+:root {
+    --highlight: #E74040;
+    --primary: #23A6F0;
+    --secundary: #23856D;
+    --alert: #E77C40;
+    --background: #252B42;
+    --second-text: #737373;
+    --text-color: #252B42;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    background: #FAFAFA;
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 3.625rem; /* 58px desktop */
+    font-weight: 800;
+}
+
+h2{
+    font-size: 2.5rem; /* 40px desktop */
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.5rem; /* 24px desktop */
+    font-weight: 700;
+}
+
+h4{
+    font-size: 1.25rem; /* 20px desktop */
+    font-weight: 500;
+}
+
+h5{
+    font-size: 1rem; /* 16px desktop */
+    font-weight: 700;
+}
+
+h6{
+    font-size: 0.875rem; /* 14px desktop */
+    font-weight: 600;
+}
+
+a{
+    font-size: 0.875rem; /* 14px desktop */
+    font-weight: 600;
+}
+
+p{
+    font-size: 0.875rem; /* 14px desktop */
+    font-weight: 600;
+}
+
+li{
+    font-size: 1.25rem; /* 20px desktop */
+    font-weight: 400;
+}
+
+button{
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+small{
+    font-size: 0.75rem; /* 20px desktop */
+    font-weight: 400;
+}
+
+.btn-text{
+    font-size: 0.875rem; /* 14px desktop */
+    font-weight: 700;
+}

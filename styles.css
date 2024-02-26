@@ -1,0 +1,226 @@
+@import url('./index.css');
+
+main>* {
+    padding: 0 12.5rem;
+}
+
+.fullBleed {
+    grid-column: span 3;
+}
+
+#pageHeader {
+    height: 6rem;
+    padding: 0;
+    background: white;
+}
+
+#pageHeader nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12.5rem;
+}
+
+#pageHeader section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    color: var(--primary);
+}
+
+#pageHeader aside {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary);
+}
+
+#pageHeader aside section p {
+    margin: 0;
+}
+
+#pageHeader aside p {
+    margin-left: -2rem;
+}
+
+#pageHeader section a {
+    color: var(--primary);
+}
+
+#pageHeader ul {
+    display: flex;
+    gap: 1rem;
+}
+
+#pageHeader li {
+    list-style: none;
+}
+
+#pageHeader a {
+    text-decoration: none;
+}
+
+#pageHeader li a {
+    color: var(--second-text);
+}
+
+.selectedHeader {
+    color: var(--text-color) !important;
+}
+
+#sliderSection {
+    padding: 0;
+}
+
+.sliderContent {
+    position: relative;
+    color: white;
+}
+
+.sliderContent section {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sliderContent section p {
+    width: 60%;
+    margin: 1.5rem 0;
+}
+
+.sliderContent section h1 {
+    margin: 0.5rem 0;
+}
+
+.sliderContent img {
+    inline-size: 100%;
+}
+
+#productsFlex {
+    display: flex;
+}
+
+.subtitleProduct {
+    color: var(--second-text);
+}
+
+.productCard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    text-align: center;
+    margin: 10px;
+    background: white;
+    border: 1px solid rgba(128, 128, 128, 0.208);
+    padding: 0 1.5rem;
+    grid-template-rows: 1fr auto 1fr;
+    white-space: pre-line;
+    text-align: left;
+}
+
+/* voltar aqui ta o espaçamento errado ainda */
+.productCard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    text-align: center;
+    margin: 10px;
+    background: white;
+    border: 1px solid rgba(128, 128, 128, 0.208);
+    padding: 0 1.5rem;
+    grid-template-rows: 1fr auto 1fr;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.productCard p {
+    grid-column: 1;
+    align-self: self-end;
+    grid-row: 1;
+}
+
+.productCard h3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.productCard small {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: self-start;
+
+}
+
+.productCard img {
+    grid-column: 2;
+    grid-row: span 3;
+    width: 100%;
+    max-width: 500px;
+    align-self: self-end;
+}
+
+.productCard img {
+    grid-column: 2;
+    grid-row: span 3;
+    width: 100%;
+    max-width: 500px;
+    align-self: self-end;
+}
+
+/* voltar aqui ta o espaçamento errado ainda */
+
+#showFurniture {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 10% 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "aside header"
+        "aside div";
+}
+
+#showFurniture aside {
+    width: 20%;
+}
+
+#showFurniture aside {
+    grid-area: aside;
+}
+
+#showFurniture header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#showFurniture header img {
+    inline-size: 3rem;
+}
+
+#showFurniture header ul {
+    display: flex;
+}
+
+#showFurniture header ul li {
+    list-style: none;
+}
+
+#showFurniture div {
+    grid-area: div;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#showFurniture div section {
+    flex-basis: calc(33.33% - 10px);
+    margin: 5px;
+}

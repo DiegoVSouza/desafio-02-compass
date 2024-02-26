@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="dist/app.js" defer></script>
+  <title>Desafio 02</title>
+</head>
+
+<body>
+  <header id="pageHeader">
+    <nav>
+      <h3>Bandage</h3>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li> <a href="" class="selectedHeader">Shop</a> <img src="./images/arrowdown.svg" alt="Arrow down icon" /></li>
+        <li> <a href="">About</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Pages</a></li>
+      </ul>
+      <aside>
+        <section>
+          <img src="./images/user.svg" alt="User icon" />
+          <a href="">Login</a>
+          <p>/</p>
+          <a href="">Register</a>
+        </section>
+        <img src="./images/search.svg" alt="Magnifier icon" />
+        <img src="./images/shop.svg" alt="Shop car icon" />
+        <p id="shopCounter">1</p>
+        <img src="./images/heart.svg" alt="Heart icon" />
+        <p id="heartCounter">1</p>
+      </aside>
+    </nav>
+  </header>
+  <main>
+    <section id="sliderSection">
+      <!-- <img src="./images/arrowLeft.svg" alt="Arrow left icon"/> -->
+      <div class="slider">
+        <div class="sliderContent">
+          <section>
+          <h1>GROCERIES DELIVERY</h1>
+          <p>We know how large objects will act, but things on a
+              small scale just do not act that way.</p>
+            <button class="bigButton Button">Start Now</button>
+          </section>
+          <img src="./images/sliderImage.png" alt="Groceries delivery image" />
+        </div>
+      </div>
+      <!-- <img src="./images/arrowRight.svg" alt="Arrow right icon"/> -->
+    </section>
+
+    <section id="productsFlex">
+      <article class="productCard">
+        <p class="subtitleProduct">Your space </p>
+        <h3>Unique 
+          Life</h3>
+        <small>Explore Items</small>
+        <img src="./images/productImage01.png" alt="Product image 01">
+      </article>
+
+      <article class="productCard">
+        <p class="subtitleProduct">Your space</p>
+        <h3>Título 1</h3>
+        <small>Your space</small>
+        <img src="./images/productImage02.png" alt="Product image 02">
+      </article>
+
+      <article class="productCard">
+        <p class="subtitleProduct">Your space</p>
+        <h3>Título 1</h3>
+        <small>Your space</small>
+        <img src="./images/productImage03.png" alt="Product image 03">
+      </article>
+
+    </section>
+
+    <article id="showFurniture">
+      <aside>
+        <h6>
+          FURNITURE
+        </h6>
+        <h6>5 Items</h6>
+        <img src="./images/cardCover01.png" alt="Groceries delivery image" />
+      </aside>
+
+      <header>
+        <h5>BESTSELLER PRODUCTS</h5>
+        <ul>
+          <li>Men</li>
+          <li>Women</li>
+          <li>Acessories</li>
+        </ul>
+
+        <img src="./images/arrowLeftFurniture.svg" alt="Arrow left Furniture icon" />
+        <img src="./images/arrowRightFurniture.svg" alt="Arrow right Furniture icon" />
+      </header>
+
+      <div>
+        <section class="productFurniture">
+          <img src="./images/productImage01.png" alt="Product image 01">
+          <h5>Produto 01</h5>
+          <a href="">Produtos tal</a>
+          <div class="prices">
+            <h5 class="realPrice">$16.48</h5>
+            <h5 class="discountPrice">$6.48</h5>
+          </div>
+        </section>
+  
+        <section class="productFurniture">
+          <img src="./images/productImage02.png" alt="Product image 01">
+          <h5>Produto 01</h5>
+          <a href="">Produtos tal</a>
+          <div class="prices">
+            <h5 class="realPrice">$16.48</h5>
+            <h5 class="discountPrice">$6.48</h5>
+          </div>
+        </section>
+  
+        <section class="productFurniture">
+          <img src="./images/productImage03.png" alt="Product image 01">
+          <h5>Produto 01</h5>
+          <a href="">Produtos tal</a>
+          <div class="prices">
+            <h5 class="realPrice">$16.48</h5>
+            <h5 class="discountPrice">$6.48</h5>
+          </div>
+        </section>
+  
+        <section class="productFurniture">
+          <img src="./images/productImage01.png" alt="Product image 01">
+          <h5>Produto 01</h5>
+          <a href="">Produtos tal</a>
+          <div class="prices">
+            <h5 class="realPrice">$16.48</h5>
+            <h5 class="discountPrice">$6.48</h5>
+          </div>
+        </section>
+      </div>
+     
+
+    </article>
+
+    <article class="mostPopularArticle">
+      <img src="./images/cardCover02.png" alt="Product image tutorial">
+      <section>
+        <h3>
+          MOST POPULAR
+        </h3>
+        <p>
+          We focus on ergonomics and meeting
+          you where you work. It's only a
+          keystroke away.
+        </p>
+        <img src="./images/productMostPopular01.png" alt="Product image 01">
+        <a href="">English Department</a>
+        <div class="prices">
+          <h5 class="realPrice">$16.48</h5>
+          <h5 class="discountPrice">$6.48</h5>
+        </div>
+      </section>
+
+      <footer>
+
+        <section>
+          <h2>
+            1.
+          </h2>
+          <h6>
+            Easy to use
+          </h6>
+          <small>
+            Things on a very small that you have any direct
+          </small>
+        </section>
+
+        <section>
+          <h2>
+            2.
+          </h2>
+          <h6>
+            Easy to use
+          </h6>
+          <small>
+            Things on a very small that you have any direct
+          </small>
+        </section>
+
+        <section>
+          <h2>
+            3.
+          </h2>
+          <h6>
+            Easy to use
+          </h6>
+          <small>
+            Things on a very small that you have any direct
+          </small>
+        </section>
+
+        <section>
+          <h2>
+            4.
+          </h2>
+          <h6>
+            Easy to use
+          </h6>
+          <small>
+            Things on a very small that you have any direct
+          </small>
+        </section>
+      </footer>
+    </article>
+
+    <article class="mostPopularArticle">
+      <section>
+        <h3>
+          MOST POPULAR
+        </h3>
+        <p>
+          We focus on ergonomics and meeting
+          you where you work. It's only a
+          keystroke away.
+        </p>
+        <img src="./images/productMostPopular02.png" alt="Product image 01">
+        <a href="">English Department</a>
+        <img src="./images/downloadIcon.svg" alt="Download icon">
+        <h6>15 sales</h6>
+        <div class="prices">
+          <h5 class="realPrice">$16.48</h5>
+          <h5 class="discountPrice">$6.48</h5>
+        </div>
+
+        <div class="changeColor">
+          <button class="blue"></button>
+          <button class="green"></button>
+          <button class="orange"></button>
+          <button class="black"></button>
+        </div>
+      </section>
+      <img src="./images/productImage01.png" alt="Product image tutorial">
+
+    </article>
+
+    <article id="bestSellersProducts">
+      <header>
+        <h3>
+          BESTSELLER PRODUCTS
+        </h3>
+      </header>
+      <hr />
+
+      <section>
+        <img src="./images/productImage04.png" alt="Product image 01">
+        <h5>
+          Produto 01
+        </h5>
+        <a href="">Produtos tal</a>
+        <div class="prices">
+          <h5 class="realPrice">$16.48</h5>
+          <h5 class="discountPrice">$6.48</h5>
+        </div>
+      </section>
+      <section>
+        <img src="./images/productImage05.png" alt="Product image 01">
+        <h5>
+          Produto 01
+        </h5>
+        <a href="">Produtos tal</a>
+        <div class="prices">
+          <h5 class="realPrice">$16.48</h5>
+          <h5 class="discountPrice">$6.48</h5>
+        </div>
+      </section>
+      <section>
+        <img src="./images/productImage06.png" alt="Product image 01">
+        <h5>
+          Produto 01
+        </h5>
+        <a href="">Produtos tal</a>
+        <div class="prices">
+          <h5 class="realPrice">$16.48</h5>
+          <h5 class="discountPrice">$6.48</h5>
+        </div>
+      </section>
+      <section>
+        <img src="./images/productImage07.png" alt="Product image 01">
+        <h5>
+          Produto 01
+        </h5>
+        <a href="">Produtos tal</a>
+        <div class="prices">
+          <h5 class="realPrice">$16.48</h5>
+          <h5 class="discountPrice">$6.48</h5>
+        </div>
+      </section>
+    </article>
+
+    <section id="brands">
+      <img src="./images/hooli.svg" alt="hooli logo">
+      <img src="./images/lyft.svg" alt="lyft logo">
+      <img src="./images/hood.svg" alt="hood logo">
+      <img src="./images/stripe.svg" alt="stripe logo">
+      <img src="./images/aws.svg" alt="aws logo">
+      <img src="./images/reddit.svg" alt="reddit logo">
+    </section>
+    <article>
+      <header>
+        <h6>
+          Practice Advice
+        </h6>
+        <h2>Featured Posts</h2>
+      </header>
+      <section>
+        <button>New</button>
+        <img src="./images/featuredAdvice01.png" alt="featured advice image">
+        <p>Goole</p>
+        <p>Trending</p>
+        <p>New</p>
+        <h3>
+          Loudest à la Madison #1
+          (L'integral)
+        </h3>
+        <p class="bigAdvice">
+          We focus on ergonomics and meeting
+          you where you work. It's only a
+          keystroke away.
+        </p>
+        <img src="./images/clock.svg" alt="clock icon">
+        <p>22 April 2021</p>
+        <img src="./images/grafic.svg" alt="grafic icon">
+        <p>10 comments</p>
+
+        <p class="bigAdvice">
+          Learn More
+        </p>
+        <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon">
+      </section>
+      <section>
+        <button>New</button>
+        <img src="./images/featuredAdvice02.png" alt="featured advice image">
+        <p>Goole</p>
+        <p>Trending</p>
+        <p>New</p>
+        <h3>
+          Loudest à la Madison #1
+          (L'integral)
+        </h3>
+        <p class="bigAdvice">
+          We focus on ergonomics and meeting
+          you where you work. It's only a
+          keystroke away.
+        </p>
+        <img src="./images/clock.svg" alt="clock icon">
+        <p>22 April 2021</p>
+        <img src="./images/grafic.svg" alt="grafic icon">
+        <p>10 comments</p>
+
+        <p class="bigAdvice">
+          Learn More
+        </p>
+        <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon">
+      </section>
+      <section>
+        <button>New</button>
+        <img src="./images/featuredAdvice03.png" alt="featured advice image">
+        <p>Goole</p>
+        <p>Trending</p>
+        <p>New</p>
+        <h3>
+          Loudest à la Madison #1
+          (L'integral)
+        </h3>
+        <p class="bigAdvice">
+          We focus on ergonomics and meeting
+          you where you work. It's only a
+          keystroke away.
+        </p>
+        <img src="./images/clock.svg" alt="clock icon">
+        <p>22 April 2021</p>
+        <img src="./images/grafic.svg" alt="grafic icon">
+        <p>10 comments</p>
+
+        <p class="bigAdvice">
+          Learn More
+        </p>
+        <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon">
+      </section>
+    </article>
+  </main>
+  <footer id="siteFooter">
+    <section>
+      <h3>
+        Consulting Agency For Your Business
+      </h3>
+      <p>
+        the quick fox jumps over the lazy dog
+      </p>
+      <button class="footerButton Button">
+        Contact Us
+      </button>
+    </section>
+    <article id="footerLinks">
+      <section>
+        <h5>
+          Company Info
+        </h5>
+        <a href="">About Us</a>
+        <a href="">Carrier</a>
+        <a href="">We are hiring</a>
+        <a href="">Blog</a>
+      </section>
+      <section>
+        <h5>
+          Legal
+        </h5>
+        <a href="">About Us</a>
+        <a href="">Carrier</a>
+        <a href="">We are hiring</a>
+        <a href="">Blog</a>
+      </section>
+      <section>
+        <h5>
+          Features
+        </h5>
+        <a href="">Business Marketing</a>
+        <a href="">User Analytic</a>
+        <a href="">Live Chat</a>
+        <a href="">Unlimited Support</a>
+      </section>
+      <section>
+        <h5>
+          Resources
+        </h5>
+        <a href="">IOS & Android</a>
+        <a href="">Watch a Demo</a>
+        <a href="">Customers</a>
+        <a href="">API</a>
+      </section>
+      <section>
+        <h5>
+          Get In Touch
+        </h5>
+        <div>
+          <img src="./images/phone.svg" alt="phone icon">
+          <a href="">(480) 555-0103</a>
+        </div>
+        <div>
+          <img src="./images/local.svg" alt="local icon">
+          <a href="">4517 Washington Ave.</a>
+        </div>
+        <div>
+          <img src="./images/email.svg" alt="email icon">
+          <a href="">debra.holt@example.com</a>
+        </div>
+
+      </section>
+
+    </article>
+    <section>
+      <h6>
+        Made With Love By Finland All Right Reserved
+      </h6>
+      <img src="./images/facebook.svg" alt="facebook icon">
+      <img src="./images/instagram.svg" alt="instagram icon">
+      <img src="./images/twitter.svg" alt="twitter icon">
+    </section>
+  </footer>
+</body>
+
+</html>
