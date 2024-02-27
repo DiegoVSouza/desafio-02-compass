@@ -184,10 +184,11 @@ main>* {
 
 /* voltar aqui ta o espaçamento errado ainda */
 
-#showFurniture {
+.showFurniture {
     display: grid;
-    padding: 0;
-    grid-template-columns: 40% 1fr;
+    padding: 3rem 0;
+    margin-top: 5rem;
+    grid-template-columns: 0.4fr 1fr;
     grid-template-rows: 10% 1fr;
     background: white;
     gap: 0px 15px;
@@ -196,26 +197,38 @@ main>* {
         "aside div";
 }
 
+.furnitureInverted{
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-areas:
+        "header aside"
+        "div aside";
+}
 
-#showFurniture aside {
+
+.showFurniture aside {
     position: relative;
     grid-area: aside;
     margin-left: 12.5rem;
 }
 
-#showFurniture aside h6{
+.furnitureInverted aside {
+    margin-left: 0;
+    margin-right: 12.5rem;
+}
+
+.showFurniture aside h6 {
     position: absolute;
     font-weight: 700;
     top: 24px;
-    left:3rem ;
+    left: 3rem;
 }
 
-#showFurniture aside h6:nth-child(2) {
+.showFurniture aside h6:nth-child(2) {
     top: 53px;
     color: var(--second-text);
 }
 
-#showFurniture header {
+.showFurniture header {
     grid-area: header;
     display: flex;
     align-items: center;
@@ -224,37 +237,431 @@ main>* {
     margin-right: 12.5rem;
 }
 
-#showFurniture header img {
+.furnitureInverted header {
+    margin-right: 0;
+    margin-left: 12.5rem;
+}
+
+.showFurniture header img {
     inline-size: 3rem;
 }
 
-#showFurniture div {
+.showFurniture>div {
     gap: 1rem;
 }
 
-#showFurniture header ul {
+.showFurniture header ul {
     display: flex;
     color: var(--second-text);
     gap: 2rem;
     padding: 0;
 }
 
-.selectedFurniture{
+.selectedFurniture {
     color: var(--primary);
 }
 
-#showFurniture header ul li {
+.showFurniture header ul li {
     list-style: none;
     cursor: pointer;
 }
 
-#showFurniture div {
+.showFurniture > div {
+    margin-top: 2.625rem;
     grid-area: div;
-    display: flex;
-    flex-wrap: wrap;
+    margin-right: 12.5rem;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-#showFurniture div section {
-    flex-basis: calc(33.33% - 10px);
-    margin: 5px;
+.furnitureInverted > div{
+    margin-right: 0;
+    margin-left: 12.5rem;
 }
+
+.productFurniture {
+    text-align: center;
+}
+
+.productFurniture>h5 {
+    margin-top: 1rem;
+    margin-bottom: 0.625rem;
+}
+
+.productFurniture a {
+    text-decoration: none;
+    color: var(--second-text);
+    font-weight: 700;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.prices h5 {
+    margin: 0.625rem 0.3rem;
+}
+
+.realPrice {
+    color: var(--second-text);
+}
+
+.discountPrice {
+    color: var(--secundary);
+}
+
+.mostPopularArticle {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "img product"
+        "tutorial tutorial";
+    max-width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.mostPopularInverted{
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 3rem;
+    grid-template-areas:
+        "product img";
+}
+
+.mostPopularArticle>img {
+    height: auto;
+    width: auto;
+    grid-area: img;
+}
+
+
+.mostPopularArticle>section {
+    text-align: center;
+    grid-area: product;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--light-gray);
+}
+
+.mostPopularArticle>section p {
+    color: var(--second-text);
+    width: 60%;
+}
+
+.mostPopularArticle>section a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-top: 3.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.mostPopularArticle>section>img {
+    height: auto;
+    width: 80%;
+    margin-top: 3.5rem;
+}
+
+
+.mostPopularArticle footer {
+    grid-area: tutorial;
+    margin: 0;
+    display: flex;
+}
+
+.mostPopularArticle footer section {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+
+.mostPopularArticle footer section h2,
+h6,
+small {
+    margin: 0;
+}
+
+.mostPopularArticle footer section h6 {
+    margin-bottom: 5px;
+}
+
+.mostPopularArticle footer section h2 {
+    color: var(--highlight);
+}
+
+.mostPopularSales {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--second-text);
+    margin-bottom: 1.2rem;
+}
+
+.changeColor {
+    display: flex;
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.blue {
+    background-color: var(--primary);
+}
+
+.green {
+    background-color: var(--secundary);
+}
+
+.orange {
+    background-color: var(--alert);
+}
+
+.black {
+    background-color: var(--background);
+}
+
+
+
+#bestSellersProducts header{
+    border-bottom: 2px solid var(--light-gray);
+}
+
+#bestSellersProducts div > section{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#bestSellersProducts div > section > *:not(img) {
+    padding-left: 1.5rem; 
+  }
+
+#bestSellersProducts section h5{
+    margin-top: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+#bestSellersProducts section a{
+    text-decoration: none;
+    color: var(--second-text);
+    font-weight: 700;
+}
+
+#bestSellersProducts > div{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#featuredPosts{
+    width: 100%;
+    padding: 0;
+    background: white;
+}
+
+#featuredPosts > *{
+    padding: 0 12.5rem;
+}
+
+#featuredPosts > header h2{
+    padding: 0;
+    margin: 0;
+    margin-top: 0.625rem;
+}
+
+#featuredPosts > header{
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+}
+
+#featuredPosts > header h6{
+    color: var(--primary);
+}
+
+#featuredPosts > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#featuredPosts > div > section{
+    position: relative;
+}
+
+
+#featuredPosts > div > section > button{
+    width: 3.5rem;
+    height: 1.5rem;
+    padding: 0 0.625rem;
+    background-color: var(--highlight);
+    color: white;
+    font-size: 14px;
+    cursor: default;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+}
+
+.adviceTopics{
+    display: inline;
+    margin-right: 15px;
+    color: var(--second-text);
+}
+
+.adviceTopicsSelected{
+    color: var(--primary) !important;
+}
+
+#featuredPosts{
+    padding-bottom: 7rem;
+}
+
+#featuredPosts div > section {
+    -webkit-box-shadow: -3px 3px 7px -1px rgba(0,0,0,0.20);
+    -moz-box-shadow: -3px 3px 7px -1px rgba(0,0,0,0.20);
+    box-shadow: -3px 3px 7px -1px rgba(0,0,0,0.20);
+}
+
+#featuredPosts div > section > *:not(img):not(button) {
+    padding-left: 1.5rem; 
+}
+
+#featuredPosts div > section > img {
+    margin-bottom: 1.5rem;
+    inline-size: 100%;
+}
+
+
+#featuredPosts div > section > h4 {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+#featuredPosts div > section > p {
+    color: var(--second-text);
+    margin-bottom: 10px;
+}
+
+.adviceInfo{
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--second-text);
+    padding-right: 1.5rem;
+}
+
+.adviceInfo div{
+    display: flex;
+    gap: 5px;
+}
+
+.learnMore{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+}
+
+#siteFooter{
+    background-color: var(--text-color);
+    color: white;
+}
+
+#siteFooter > * {
+    padding: 0 12.5rem;
+}
+
+#siteFooter > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#siteFooter > section {
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+#siteFooter > section:first-child {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+#siteFooter > section button {
+   width: 10rem;
+   height: 3.25rem;
+}
+
+#siteFooter section h3{
+    margin: 0;
+    display: inline;
+}
+
+#footerLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#footerLinks section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#footerLinks section h5{
+    margin: 0;
+    padding: 1.25rem 0;
+}
+
+#footerLinks section a{
+    text-decoration: none;
+    color: white;
+}
+
+#footerLinks section div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#socialNetWorks{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+
+
+
+
+
+
