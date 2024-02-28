@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="dist/app.js" defer></script>
   <title>Desafio 02</title>
+  <script src="dist/bundle.js" defer></script>
 </head>
 
 <body>
@@ -43,9 +43,8 @@
   </header>
   <main>
     <section id="sliderSection">
-      <!-- <img src="./images/arrowLeft.svg" alt="Arrow left icon"/> -->
-      <div class="slider">
-        <div class="sliderContent">
+      <div class="slides">
+        <div class="slideContainer">
           <section>
             <h1>GROCERIES DELIVERY</h1>
             <p>We know how large objects will act, but things on a <br />
@@ -54,8 +53,21 @@
           </section>
           <img src="./images/sliderImage.png" alt="Groceries delivery image" />
         </div>
+        <div class="slideContainer">
+          <section>
+            <h1>GROCERIES DELIVERY 2</h1>
+            <p>We know how large objects will act, but things on a <br />
+              small scale just do not act that way.</p>
+            <button class="bigButton Button">Start Now</button>
+          </section>
+          <img src="./images/sliderImage.png" alt="Groceries delivery image" />
+        </div>
+
       </div>
-      <!-- <img src="./images/arrowRight.svg" alt="Arrow right icon"/> -->
+      <img id="prev" src="./images/arrowRightSlider.svg" alt="">
+      <img id="next" src="./images/arrowLeftSlider.svg" alt="">
+      <div class="pagination"></div>
+
     </section>
 
     <section id="productsFlex">
@@ -112,7 +124,7 @@
         </div>
 
       </header>
-      <div >
+      <div>
         <section class="productFurniture">
           <img src="./images/productImage01.png" alt="Product image 01">
           <h5>Produto 01</h5>
@@ -286,7 +298,7 @@
         </div>
 
       </header>
-      <div >
+      <div>
         <section class="productFurniture">
           <img src="./images/productImage01.png" alt="Product image 01">
           <h5>Produto 01</h5>
@@ -467,19 +479,21 @@
             keystroke away.
           </p>
           <div class="adviceInfo">
-            <div >
+            <div>
               <img src="./images/clock.svg" alt="clock icon">
               <small>22 April 2021</small>
             </div>
-            <div >
+            <div>
               <img src="./images/grafic.svg" alt="grafic icon">
               <small>10 comments</small>
             </div>
           </div>
-          <div class="learnMore"><p >
-            Learn More
-          </p>
-          <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon"></div>
+          <div class="learnMore">
+            <p>
+              Learn More
+            </p>
+            <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon">
+          </div>
         </section>
         <section>
           <button>NEW</button>
@@ -507,10 +521,12 @@
             </div>
           </div>
 
-          <div class="learnMore"><p >
-            Learn More
-          </p>
-          <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon"></div>
+          <div class="learnMore">
+            <p>
+              Learn More
+            </p>
+            <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon">
+          </div>
         </section>
         <section>
           <button>NEW</button>
@@ -538,16 +554,18 @@
             </div>
           </div>
 
-          <div class="learnMore"><p >
-            Learn More
-          </p>
-          <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon"></div>
+          <div class="learnMore">
+            <p>
+              Learn More
+            </p>
+            <img src="./images/arrowRightAdvice.svg" alt="Arrow right advice icon">
+          </div>
         </section>
       </div>
     </article>
   </main>
   <footer id="siteFooter">
-    <section >
+    <section>
       <div>
         <h3>
           Consulting Agency For Your Business
@@ -556,7 +574,7 @@
           the quick fox jumps over the lazy dog
         </p>
       </div>
-     
+
       <button class="btn-text">
         Contact Us
       </button>
