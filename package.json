@@ -1,23 +1,29 @@
 {
-  "name": "understanding-typescript",
+  "name": "desafio-02",
   "version": "1.0.0",
-  "description": "Understanding TypeScript Course Setup",
+  "description": "Desafio 02",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "webpack-dev-server"
   },
   "keywords": [
     "typescript",
     "course"
   ],
-  "author": "Maximilian Schwarzmüller",
+  "author": "Diego Vieira",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.5.4"
   },
   "dependencies": {
-    "react-icons": "^5.0.1",
-    "typescript": "^5.3.3"
+    "@types/slick-carousel": "^1.6.40",
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.11.1"
   }
 }
