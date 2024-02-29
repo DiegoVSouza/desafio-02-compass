@@ -195,7 +195,6 @@ const mostPorpularImages = [
         color: "black"
     },
 ];
-
 document.addEventListener('DOMContentLoaded', () => {
     var _a, _b, _c, _d, _e;
     function checkScreenSize() {
@@ -206,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         screenWidth = checkScreenSize();
     });
-    let itemsPerPage = screenWidth > 600 ? 6 : 4;
+    let itemsPerPage = screenWidth > 600 ? 6 : 3;
     let currentSlide = 0;
     const pagination = document.querySelector('.pagination');
     const slides = document.querySelector('.slides');
