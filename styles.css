@@ -748,7 +748,7 @@ small {
     gap: 1.25rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
    
     body {
         margin: 0;
@@ -858,33 +858,19 @@ small {
         cursor: pointer;
     }
 
-
-    .showFurniture header ul {
-        display: flex;
-        color: var(--second-text);
-        gap: 2rem;
-        padding: 0;
-        padding-bottom: 1.2rem;
+    .showFurniture>div {
+        margin-top: 2.625rem;
+        grid-area: div;
+        margin-right: 12.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.25rem;
+        width: 100%;
+        overflow: hidden;
     }
-
-    .selectedFurniture {
-        color: var(--primary);
-    }
-
-    .showFurniture header ul li {
-        list-style: none;
-        cursor: pointer;
-    }
-
-    .showFurniture header ul li:hover {
-        color: var(--primary);
-    }
-
-    .showFurniture>div>section {
-        display: none;
-    }
-
-    .showFurniture>div>section:nth-child(-n+6) {
+    
+    .showFurniture>div>section:nth-child(-n+4) {
         display: block;
     }
 
@@ -1034,17 +1020,38 @@ small {
         flex-direction: column;
     }
 
+    #bestSellersProducts header > h3{
+        text-align: center;
+    }
+    #bestSellersProducts header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    #bestSellersProducts div section {
+       padding: 0 2.5rem;
+    }
+    #bestSellersProducts div section img {
+        width: 100%;
+     }
+
+
     #brands{
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     #featuredPosts>* {
         padding: 2.5rem;
     }
 
+    #featuredPosts header{
+        padding: 5rem 0;
+    }
+
     #featuredPosts>div {
         flex-direction: column;
+        gap: 1.875rem;
     }
 
     #siteFooter {
