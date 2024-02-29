@@ -297,11 +297,9 @@ main>* {
 
 .showFurniture header img {
     inline-size: 3rem;
+    cursor: pointer;
 }
 
-.showFurniture>div {
-    gap: 1rem;
-}
 
 .showFurniture header ul {
     display: flex;
@@ -327,6 +325,16 @@ main>* {
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.showFurniture>div > section {
+    display: none;
+}
+
+.showFurniture>div > section:nth-child(-n+6) {
+    display: block;
 }
 
 .furnitureInverted>div {
@@ -713,3 +721,4 @@ small {
     align-items: center;
     gap: 1.25rem;
 }
+
