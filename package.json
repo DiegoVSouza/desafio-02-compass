@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "Desafio 02",
   "main": "app.js",
-  "homepage": "https://diegovsouza.github.io/desafio-02-compass",
+  "homepage": "https://diegovsouza.github.io/desafio-02-compass/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "yarn build"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "typescript",
