@@ -6,6 +6,13 @@ export type Product = {
     realPrice: string;
     discountPrice: string;
 }
+
+export type Image = {
+    src: string;
+    alt: string;
+    color: string;
+}
+
 export const productsMen: Product[] = [
     {
         img: "./images/productImage01.png",
@@ -183,4 +190,28 @@ export const productsAcessories: Product[] = [
         discountPrice: "$6.48"
     }
 ];
+
+export const mostPorpularImages: Image[] = [
+    {
+        src: "./images/productImagemMostPopularBlue.jpg",
+        alt: "Product blue",
+        color: "blue"
+    },
+    {
+        src: "./images/productImagemMostPopularGreen.jpg",
+        alt: "Product green",
+        color: "green"
+    },
+    {
+        src: "./images/productImagemMostPopularOrange.jpg",
+        alt: "Product orange",
+        color: "orange"
+    },
+    {
+        src: "./images/productImagemMostPopularBlack.jpg",
+        alt: "Product black",
+        color: "black"
+    },
+
+]
 

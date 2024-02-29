@@ -1,9 +1,21 @@
-import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Product, productsMen, productsAcessories, productsWomen } from './data'
+import { Product, productsMen, productsAcessories, productsWomen, Image, mostPorpularImages } from './data'
 document.addEventListener('DOMContentLoaded', () => {
+
+  function checkScreenSize() {
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  
+    return screenWidth
+  }
+  
+  let screenWidth = checkScreenSize();
+  
+  window.addEventListener('resize', ()=>{
+    screenWidth = checkScreenSize();
+  });
+  
+
+  let itemsPerPage = screenWidth > 600 ? 6 : 4;
+
   let currentSlide: number = 0;
 
   const pagination: HTMLElement = document.querySelector('.pagination')!;
@@ -61,19 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   }
 
-  // const slides: HTMLElement = document.querySelector('.slides')!;
-
-  // const changeSlideFuniture = (n:number):void => {
-
-  // }
-
   const addProductsToFurniture = (id: string, productsArray: Product[]) => {
     const productsDiv = document.getElementById(id);
 
     if (productsDiv) {
-      productsArray.forEach(produto => {
+      productsArray.forEach((produto, index) => {
         const section = document.createElement('section');
-        section.className = 'productFurniture';
+          section.style.display = 'none';
+          section.className = 'productFurniture';
 
         const img = document.createElement('img');
         img.src = produto.img;
@@ -106,6 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
         section.appendChild(pricesDiv);
 
         productsDiv.appendChild(section);
+        if (index < itemsPerPage) {
+          console.log(index)
+          section.classList.add('fadeInRight');
+          setTimeout(() => {
+            section.classList.remove('fadeInRight');
+          }, 600);
+          section.style.display = 'block';
+        }
+
       });
     }
   }
@@ -182,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentPage01 = 0;
   let currentPage02 = 0;
-  let itemsPerPage = 6;
 
   document.getElementById('arrowRightFurniture01')?.addEventListener('click', () => {
     showNextFurniture01();
@@ -202,47 +217,131 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function showNextFurniture01() {
-    let productsDiv = document.getElementById('productsFurniture01')!;
+    let id = 'productsFurniture01'
+    let productsDiv = document.getElementById(id)!;
     let totalItems = productsDiv.children.length;
     currentPage01 = (currentPage01 + 1) % Math.ceil(totalItems / itemsPerPage);
     if (totalItems > itemsPerPage) {
-      updateCarouselFurniture(1, currentPage01);
+      updateCarouselFurniture(id, currentPage01);
     }
   }
 
   function showPrevFurniture01() {
-    let productsDiv = document.getElementById('productsFurniture01')!;
+    let id = 'productsFurniture01'
+    let productsDiv = document.getElementById(id)!;
     let totalItems = productsDiv.children.length;
     currentPage01 = (currentPage01 - 1 + Math.ceil(totalItems / itemsPerPage)) % Math.ceil(totalItems / itemsPerPage);
     if (totalItems > itemsPerPage) {
-      updateCarouselFurniture(1,currentPage01);
+      updateCarouselFurniture(id, currentPage01);
     }
   }
 
   function showNextFurniture02() {
-    let productsDiv = document.getElementById('productsFurniture02')!;
+    let id = 'productsFurniture02'
+    let productsDiv = document.getElementById(id)!;
     let totalItems = productsDiv.children.length;
     currentPage02 = (currentPage02 + 1) % Math.ceil(totalItems / itemsPerPage);
     if (totalItems > itemsPerPage) {
-      updateCarouselFurniture(2, currentPage02);
+      updateCarouselFurniture(id, currentPage02);
     }
   }
 
   function showPrevFurniture02() {
-    let productsDiv = document.getElementById('productsFurniture02')!;
+    let id = 'productsFurniture02'
+    let productsDiv = document.getElementById(id)!;
     let totalItems = productsDiv.children.length;
     currentPage02 = (currentPage02 - 1 + Math.ceil(totalItems / itemsPerPage)) % Math.ceil(totalItems / itemsPerPage);
     if (totalItems > itemsPerPage) {
-      updateCarouselFurniture(2,currentPage02);
+      updateCarouselFurniture(id, currentPage02);
     }
   }
 
-  function updateCarouselFurniture(n: number, currentPage: number) {
-    const sections = document.querySelectorAll(`.showFurniture > #productsFurniture0${n} > section`);
+  function updateCarouselFurniture(id: string, currentPage: number) {
+    const sections = document.querySelectorAll(`.showFurniture > #${id} > section`);
     sections.forEach((section: any, index) => {
       const isVisible = index >= currentPage * itemsPerPage && index < (currentPage + 1) * itemsPerPage;
-      section.style.display = isVisible ? 'block' : 'none';
+
+      if (!isVisible) {
+        section.classList.add('fadeOutLeft');
+        setTimeout(() => {
+          section.classList.remove('fadeOutLeft');
+        }, 600);
+        section.style.display = 'none';
+
+      } else {
+        section.classList.add('fadeInRight');
+        setTimeout(() => {
+          section.classList.remove('fadeInRight');
+        }, 600);
+        section.style.display = 'block';
+
+      }
     });
   }
+
+
+  const spinnerDiv = document.createElement('div');
+  spinnerDiv.classList.add('spinner')
+  const svgContent = `
+  <svg width="100" height="100">
+    <circle 
+      cx="50" cy="50" r="45" 
+      stroke-width="10" stroke="#eee" 
+      fill="none"
+    ></circle>
+
+    <path 
+      d="M50 5 A 45 45 0 0 1 95 50" 
+      fill="none"
+      stroke-width="10" stroke="#0079b8"
+    ></path>
+  </svg>
+`;
+
+  spinnerDiv.innerHTML = svgContent;
+
+  const updateMostPopularImageColor = (siblingElement: Element, color: string) => {
+    let image = mostPorpularImages.find(image => image.color === color)
+    if (image) {
+      const imgElement = document.createElement('img');
+      imgElement.src = image.src
+      imgElement.alt = image.alt
+      if (siblingElement) {
+        let nextsibling = siblingElement.nextElementSibling;
+
+        siblingElement.parentNode?.insertBefore(spinnerDiv, siblingElement.nextSibling);
+
+        while (nextsibling) {
+          if (nextsibling.tagName.toLowerCase() === 'img') {
+            nextsibling.remove();
+          }
+
+          nextsibling = nextsibling.nextElementSibling;
+        }
+        siblingElement.parentNode?.insertBefore(imgElement, siblingElement.nextSibling);
+        imgElement.addEventListener('load',()=>{
+          siblingElement.parentNode?.removeChild(spinnerDiv);
+        })
+      }
+    }
+  }
+
+  let pMostPopularAricle = document.querySelector('.mostPopularArticle.mostPopularInverted > section > p')!
+  const imgElement = document.createElement('img');
+  imgElement.src = mostPorpularImages[0].src
+  imgElement.alt = mostPorpularImages[0].alt
+
+  pMostPopularAricle.parentNode?.insertBefore(imgElement, pMostPopularAricle.nextSibling);
+
+  let circles = document.querySelectorAll(".circle")!;
+  circles.forEach(circle => {
+    circle.addEventListener('click', () => {
+      let color = circle.getAttribute('class')?.split(" ")[1]!
+      updateMostPopularImageColor(pMostPopularAricle, color)
+    })
+  })
+
+ 
+
 
 });
