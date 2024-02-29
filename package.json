@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "yarn build"
   },
   "keywords": [
     "typescript",
@@ -17,8 +18,12 @@
   "author": "Diego Vieira",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "gh-pages": "^6.1.1",
-    "lite-server": "^2.5.4"
+    "html-webpack-plugin": "^5.6.0",
+    "lite-server": "^2.5.4",
+    "raw-loader": "^4.0.2",
+    "svg-url-loader": "^8.0.0"
   },
   "dependencies": {
     "@types/slick-carousel": "^1.6.40",
