@@ -1,7 +1,200 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const data_1 = require("./data");
-console.log(data_1)
+const productsMen = [
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 01",
+        tittle: "Produto 01",
+        departament: "departamento 01",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 02",
+        tittle: "Produto 02",
+        departament: "departamento 02",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 03",
+        tittle: "Produto 03",
+        departament: "departamento 03",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 04",
+        tittle: "Produto 04",
+        departament: "departamento 04",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 05",
+        tittle: "Produto 05",
+        departament: "departamento 05",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 06",
+        tittle: "Produto 06",
+        departament: "departamento 06",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 07",
+        tittle: "Produto 07",
+        departament: "departamento 07",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 08",
+        tittle: "Produto 08",
+        departament: "departamento 08",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 09",
+        tittle: "Produto 09",
+        departament: "departamento 09",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    }
+];
+const productsWomen = [
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 03",
+        tittle: "Produto 03",
+        departament: "departamento 03",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 01",
+        tittle: "Produto 01",
+        departament: "departamento 01",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 02",
+        tittle: "Produto 02",
+        departament: "departamento 02",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 06",
+        tittle: "Produto 06",
+        departament: "departamento 06",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 04",
+        tittle: "Produto 04",
+        departament: "departamento 04",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 05",
+        tittle: "Produto 05",
+        departament: "departamento 05",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    }
+];
+const productsAcessories = [
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 02",
+        tittle: "Produto 02",
+        departament: "departamento 02",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 01",
+        tittle: "Produto 01",
+        departament: "departamento 01",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 03",
+        tittle: "Produto 03",
+        departament: "departamento 03",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage02.png",
+        alt: "Product image 04",
+        tittle: "Produto 04",
+        departament: "departamento 04",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage01.png",
+        alt: "Product image 05",
+        tittle: "Produto 05",
+        departament: "departamento 05",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    },
+    {
+        img: "./images/productImage03.png",
+        alt: "Product image 06",
+        tittle: "Produto 06",
+        departament: "departamento 06",
+        realPrice: "$16.48",
+        discountPrice: "$6.48"
+    }
+];
+const mostPorpularImages = [
+    {
+        src: "./images/productImagemMostPopularBlue.jpg",
+        alt: "Product blue",
+        color: "blue"
+    },
+    {
+        src: "./images/productImagemMostPopularGreen.jpg",
+        alt: "Product green",
+        color: "green"
+    },
+    {
+        src: "./images/productImagemMostPopularOrange.jpg",
+        alt: "Product orange",
+        color: "orange"
+    },
+    {
+        src: "./images/productImagemMostPopularBlack.jpg",
+        alt: "Product black",
+        color: "black"
+    },
+];
 document.addEventListener('DOMContentLoaded', () => {
     var _a, _b, _c, _d, _e;
     function checkScreenSize() {
@@ -109,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const furnitureLiElements = furnitureClasses01.getElementsByTagName('h6');
         let productsId = 'productsFurniture01';
         furnitureLiElements[0].classList.add('selectedFurniture');
-        addProductsToFurniture(productsId, data_1.productsMen);
+        addProductsToFurniture(productsId, productsMen);
         furnitureClasses01.addEventListener('click', (event) => {
             const target = event.target;
             let productsDiv = document.getElementById(productsId);
@@ -122,13 +315,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             switch (target.innerText.toLowerCase()) {
                 case 'men':
-                    addProductsToFurniture(productsId, data_1.productsMen);
+                    addProductsToFurniture(productsId, productsMen);
                     break;
                 case 'women':
-                    addProductsToFurniture(productsId, data_1.productsWomen);
+                    addProductsToFurniture(productsId, productsWomen);
                     break;
                 case 'acessories':
-                    addProductsToFurniture(productsId, data_1.productsAcessories);
+                    addProductsToFurniture(productsId, productsAcessories);
                     break;
                 default:
                     break;
@@ -139,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const furnitureLiElements = furnitureClasses02.getElementsByTagName('h6');
         let productsId = 'productsFurniture02';
         furnitureLiElements[0].classList.add('selectedFurniture');
-        addProductsToFurniture(productsId, data_1.productsMen);
+        addProductsToFurniture(productsId, productsMen);
         furnitureClasses02.addEventListener('click', (event) => {
             const target = event.target;
             let productsDiv = document.getElementById(productsId);
@@ -152,13 +345,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             switch (target.innerText.toLowerCase()) {
                 case 'men':
-                    addProductsToFurniture(productsId, data_1.productsMen);
+                    addProductsToFurniture(productsId, productsMen);
                     break;
                 case 'women':
-                    addProductsToFurniture(productsId, data_1.productsWomen);
+                    addProductsToFurniture(productsId, productsWomen);
                     break;
                 case 'acessories':
-                    addProductsToFurniture(productsId, data_1.productsAcessories);
+                    addProductsToFurniture(productsId, productsAcessories);
                     break;
                 default:
                     break;
@@ -255,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spinnerDiv.innerHTML = svgContent;
     const updateMostPopularImageColor = (siblingElement, color) => {
         var _a, _b;
-        let image = data_1.mostPorpularImages.find(image => image.color === color);
+        let image = mostPorpularImages.find(image => image.color === color);
         if (image) {
             const imgElement = document.createElement('img');
             imgElement.src = image.src;
@@ -279,8 +472,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     let pMostPopularAricle = document.querySelector('.mostPopularArticle.mostPopularInverted > section > p');
     const imgElement = document.createElement('img');
-    imgElement.src = data_1.mostPorpularImages[0].src;
-    imgElement.alt = data_1.mostPorpularImages[0].alt;
+    imgElement.src = mostPorpularImages[0].src;
+    imgElement.alt = mostPorpularImages[0].alt;
     (_e = pMostPopularAricle.parentNode) === null || _e === void 0 ? void 0 : _e.insertBefore(imgElement, pMostPopularAricle.nextSibling);
     let circles = document.querySelectorAll(".circle");
     circles.forEach(circle => {
