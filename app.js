@@ -195,6 +195,7 @@ const mostPorpularImages = [
         color: "black"
     },
 ];
+
 document.addEventListener('DOMContentLoaded', () => {
     var _a, _b, _c, _d, _e;
     function checkScreenSize() {
