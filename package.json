@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Desafio 02",
   "main": "app.js",
+  "homepage": "https://diegovsouza.github.io/desafio-02-compass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --open",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "yarn build"
   },
   "keywords": [
     "typescript",
@@ -14,6 +18,7 @@
   "author": "Diego Vieira",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "lite-server": "^2.5.4"
   },
   "dependencies": {
@@ -21,7 +26,6 @@
     "css-loader": "^6.10.0",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
-    "ts-spinner": "^1.0.0",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
