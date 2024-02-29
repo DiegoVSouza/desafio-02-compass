@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const data_1 = require("./data");
+console.log(data_1)
 document.addEventListener('DOMContentLoaded', () => {
     var _a, _b, _c, _d, _e;
     function checkScreenSize() {
