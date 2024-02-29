@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-  let itemsPerPage = screenWidth > 600 ? 6 : 4;
+  let itemsPerPage = screenWidth > 600 ? 6 : 3;
 
   let currentSlide: number = 0;
 
